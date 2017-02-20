@@ -1,0 +1,22 @@
+version: '2'
+services:
+    mysql-jira:
+       build: mysql
+       container_name: mysql-jira
+       volumes:
+         - /opt/data
+       hostname: mysql-jira
+       restart: unless-stopped
+    jira-fgh:
+       image: tomcat
+       ports:
+         - "80:8080"
+       container_name: jira-fgh
+       depends_on:
+         - mysql-jira
+       links:
+         - mysql-jira
+       volumes: 
+         - /opt/data/webapp:/usr/local/tomcat/webapps
+       hostname: jira-fgh
+       restart: unless-stopped
