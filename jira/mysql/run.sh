@@ -33,7 +33,7 @@ else
   /usr/bin/mysqld --user=root --bootstrap --verbose=0 < "$tfile"
   rm -f "$tfile"
 
-  echo "create database jiradb" | mysql_embedded -uroot -p"$MYSQL_ROOT_PASSWORD" "$MYSQL_DATABASE"
+  # echo "create database jiradb" | mysql_embedded -uroot -p"$MYSQL_ROOT_PASSWORD" "$MYSQL_DATABASE"
 
 fi
 
