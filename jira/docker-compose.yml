@@ -8,7 +8,7 @@ services:
        hostname: mysql-jira
        restart: unless-stopped
     jira-fgh:
-       image: tomcat
+       image: cptactionhank/atlassian-jira
        ports:
          - "80:8080"
        container_name: jira-fgh
