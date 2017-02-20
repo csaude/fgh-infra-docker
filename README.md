@@ -1,2 +1,2 @@
-# fhg-infra-docker
+# fgh-infra-docker
 FGH infrastructure docker 
