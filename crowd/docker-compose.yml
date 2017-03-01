@@ -10,7 +10,7 @@ services:
     crowd-fgh:
        image: blacklabelops/crowd
        ports:
-         - "8080:8095"
+         - "80:8095"
        container_name: crowd-fgh
        depends_on:
          - mysql-crowd
